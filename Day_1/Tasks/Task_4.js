@@ -17,3 +17,6 @@ console.log(typeof objectVar); // Output: object
 let arrayVar = [1, 2, 3];
 console.log(typeof arrayVar); // Output: object (arrays are objects in JavaScript)
 
+
+
+
