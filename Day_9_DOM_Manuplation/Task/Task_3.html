@@ -1,0 +1,25 @@
+<!-- Task 3: Create a new div element with some text content and append it to the body. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code </title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+<script>
+    const div = document.createElement('div')
+   
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+    // div.innerText = "My Name is Chiranjivi Patnaik"
+    const addText = document.createTextNode("My Name is Chiranjivi Patnaik")
+    div.appendChild(addText)
+
+    document.body.appendChild(div)
+</script>
+</html>

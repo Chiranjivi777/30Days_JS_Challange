@@ -1,0 +1,41 @@
+<!-- Task 8: Add and remove a CSS class to/from an HTML element. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add/Remove Class Example</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="element-to-modify">This element will be modified</div>
+    <button id="add-css-button">Add Css</button>
+    <button id="remove-css-button">Remove Css</button>
+
+    <script>
+        // Select the HTML element you want to modify
+        const elementToModify = document.getElementById('element-to-modify');
+
+        // Select the buttons
+        const addCssButton = document.getElementById('add-css-button');
+        const removeCssButton = document.getElementById('remove-css-button');
+
+        // Add a click event listener to the "Add Css" button
+        addCssButton.addEventListener('click', () => {
+            // Add the 'highlight' css to the element
+            elementToModify.classList.add('highlight');
+        });
+
+        // Add a click event listener to the "Remove Css" button
+        removeCssButton.addEventListener('click', () => {
+            // Remove the 'highlight' css from the element
+            elementToModify.classList.remove('highlight');
+        });
+    </script>
+</body>
+</html>

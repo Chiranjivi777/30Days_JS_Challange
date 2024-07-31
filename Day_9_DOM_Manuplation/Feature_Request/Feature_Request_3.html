@@ -1,0 +1,26 @@
+<!-- Element Removal Script: Write a script that selects an HTML element and removes it from the DOM. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Element Example</title>
+</head>
+<body>
+    <div id="element-to-remove">This element will be removed</div>
+    <button id="remove-button">Remove Element</button>
+
+    <script>
+        // Step 1: Select the HTML element you want to remove
+        const elementToRemove = document.getElementById('element-to-remove');
+
+        // Step 2: Select the button and add a click event listener
+        const removeButton = document.getElementById('remove-button');
+        removeButton.addEventListener('click', () => {
+            // Step 3: Remove the selected element from the DOM
+            elementToRemove.remove();
+        });
+    </script>
+</body>
+</html>

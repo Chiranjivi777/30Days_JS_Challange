@@ -1,0 +1,39 @@
+<!-- Event Handling Script: Write a script that adds event listeners to HTML elements to change their content or style based on user interactions. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Event Listeners Example</title>
+    <style>
+        .focused {
+            border-color: green;
+        }
+    </style>
+</head>
+<body>
+    <button id="changeTextButton">Click me</button>
+    <p id="textParagraph">This is a paragraph.</p>
+    <input type="text" id="inputField" placeholder="Focus on me">
+
+    <script>
+        // Change the text content of a paragraph when the button is clicked
+        document.getElementById('changeTextButton').addEventListener('click', function() {
+            document.getElementById('textParagraph').textContent = 'The text has been changed!';
+        });
+
+        // Change the border color of the input field when it gains focus
+        document.getElementById('inputField').addEventListener('focus', function() {
+            this.classList.add('focused');
+        });
+
+        // Revert the border color of the input field when it loses focus
+        document.getElementById('inputField').addEventListener('blur', function() {
+            this.classList.remove('focused');
+        });
+    </script>
+</body>
+</html>
+
+

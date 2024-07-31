@@ -1,0 +1,35 @@
+<!-- Task 6: Remove the last child of a specific HTML element. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Last Child Example</title>
+</head>
+<body>
+    <div id="parent-element">
+        <div>First Child</div>
+        <div>Second Child</div>
+        <div>Third Child</div>
+    </div>
+    <button id="remove-last-child-button">Remove Last Child</button>
+
+    <script>
+        // Step 1: Select the parent HTML element
+        const parentElement = document.getElementById('parent-element');
+
+        // Step 2: Select the button and add a click event listener
+        const removeLastChildButton = document.getElementById('remove-last-child-button');
+        removeLastChildButton.addEventListener('click', () => {
+            // Step 3: Get the last child of the parent element
+            const lastChild = parentElement.lastElementChild;
+
+            // Step 4: Remove the last child element from the DOM
+            if (lastChild) {
+                lastChild.remove();
+            }
+        });
+    </script>
+</body>
+</html>

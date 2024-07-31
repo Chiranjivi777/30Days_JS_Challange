@@ -1,0 +1,23 @@
+<!-- Select an HTML element and change one of its attributes (e.g., src of an img tag). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Image Source</title>
+</head>
+<body>
+    <img id="myImage" src="old-image.jpg" alt="Old Image">
+
+    <script>
+        // Select the <img> element by its ID
+        const imgElement = document.getElementById('myImage');
+
+        // Change the src attribute of the <img> element
+        imgElement.src = 'new-image.jpg';
+        imgElement.alt = "new Image"
+    </script>
+</body>
+</html>
+

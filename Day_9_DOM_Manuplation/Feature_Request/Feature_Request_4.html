@@ -1,0 +1,36 @@
+<!-- Attribute Modification Script: Create a script that changes the attributes of an HTML element. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Attributes Example</title>
+</head>
+<body>
+    <img id="myImage" src="old-image.jpg" alt="Old Image">
+    <a id="myLink" href="http://old-link.com">Old Link</a>
+
+    <script>
+        // Function to change the attributes of an element
+        function changeAttributes() {
+            // Select the image element by its ID
+            var imageElement = document.getElementById('myImage');
+            // Change the src attribute
+            imageElement.setAttribute('src', 'new-image.jpg');
+            // Change the alt attribute
+            imageElement.setAttribute('alt', 'New Image');
+
+            // Select the link element by its ID
+            var linkElement = document.getElementById('myLink');
+            // Change the href attribute
+            linkElement.setAttribute('href', 'http://new-link.com');
+            // Change the text content of the link
+            linkElement.textContent = 'New Link';
+        }
+
+        // Call the function to change the attributes
+        changeAttributes();
+    </script>
+</body>
+</html>
