@@ -1,0 +1,34 @@
+<!-- Add a change event listener to a select dropdown that displays the selected value in a paragraph. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Change Event</title>
+</head>
+<body>
+    <select id="mySelect">
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+    </select>
+
+    <p id="displayParagraph">Selected value will be displayed here.</p>
+
+    <script>
+        // Get the select element and the paragraph element
+        const selectElement = document.getElementById('mySelect');
+        const displayParagraph = document.getElementById('displayParagraph');
+
+        // Add a change event listener to the select element
+        selectElement.addEventListener('change', function() {
+            // Get the selected value
+            const selectedValue = selectElement.value;
+
+            // Display the selected value in the paragraph
+            displayParagraph.textContent = `Selected value: ${selectedValue}`;
+        });
+    </script>
+</body>
+</html>

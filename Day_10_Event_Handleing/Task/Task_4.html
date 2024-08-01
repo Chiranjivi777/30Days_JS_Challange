@@ -1,0 +1,33 @@
+
+<!-- Add a mouseout event listener to an element that resets its background color. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouseover Event Example</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="hoverElement" style="width: 200px; height: 100px; border: 1px solid black;">
+        Hover over me!
+    </div>
+
+    <script>
+        // Add a mouseover event listener to the element
+        document.getElementById('hoverElement').addEventListener('mouseover', function() {
+            this.style.backgroundColor = 'lightblue';
+        });
+
+        // Add a mouseout event listener to revert the background color when the mouse leaves
+        document.getElementById('hoverElement').addEventListener('mouseout', function() {
+            this.style.backgroundColor = '';
+        });
+    </script>
+</body>
+</html>

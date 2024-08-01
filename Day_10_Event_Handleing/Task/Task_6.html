@@ -1,0 +1,26 @@
+<!-- Add a keyup event listener to an input field that displays the current value in a paragraph. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyup Event Example</title>
+</head>
+<body>
+    <input type="text" id="inputField" placeholder="Type something...">
+    <p id="displayParagraph"></p>
+
+    <script>
+        // Get references to the input field and paragraph
+        const inputField = document.getElementById('inputField');
+        const displayParagraph = document.getElementById('displayParagraph');
+
+        // Add keyup event listener to the input field
+        inputField.addEventListener('keyup', function() {
+            // Display the current value of the input field in the paragraph
+            displayParagraph.textContent = inputField.value;
+        });
+    </script>
+</body>
+</html>

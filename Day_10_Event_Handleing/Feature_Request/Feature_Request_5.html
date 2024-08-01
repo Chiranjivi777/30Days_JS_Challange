@@ -1,0 +1,47 @@
+<!-- Write a script that demonstrates event delegation by handling events on dynamically added child elements. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation with Dynamic Elements</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <button id="addItem">Add Item</button>
+    <ul id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+
+    <script>
+        // Select the parent element (the list)
+        const list = document.getElementById('myList');
+        const addItemButton = document.getElementById('addItem');
+
+        // Attach a click event listener to the parent element
+        list.addEventListener('click', function(event) {
+            // Check if the clicked target is a list item
+            if (event.target && event.target.nodeName === 'LI') {
+                // Toggle the 'highlight' class on the clicked list item
+                event.target.classList.toggle('highlight');
+            }
+        });
+
+        // Function to add a new list item
+        function addListItem() {
+            const newItem = document.createElement('li');
+            newItem.textContent = `Item ${list.children.length + 1}`;
+            list.appendChild(newItem);
+        }
+
+        // Attach a click event listener to the "Add Item" button
+        addItemButton.addEventListener('click', addListItem);
+    </script>
+</body>
+</html>

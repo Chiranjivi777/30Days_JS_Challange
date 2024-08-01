@@ -1,0 +1,34 @@
+<!-- Write a script that logs key presses and displays input field values using keydown and keyup event listeners. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keydown and Keyup Event Example</title>
+</head>
+<body>
+    <input type="text" id="inputField" placeholder="Type something...">
+    <p id="displayParagraph"></p>
+    <p id="logParagraph"></p>
+
+    <script>
+        // Get references to the input field and paragraphs
+        const inputField = document.getElementById('inputField');
+        const displayParagraph = document.getElementById('displayParagraph');
+        const logParagraph = document.getElementById('logParagraph');
+
+        // Add keydown event listener to the input field
+        inputField.addEventListener('keydown', function(event) {
+            // Log the key that was pressed
+            logParagraph.textContent = `Keydown: ${event.key}`;
+        });
+
+        // Add keyup event listener to the input field
+        inputField.addEventListener('keyup', function() {
+            // Display the current value of the input field in the paragraph
+            displayParagraph.textContent = `Input Value: ${inputField.value}`;
+        });
+    </script>
+</body>
+</html>
